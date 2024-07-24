@@ -1,0 +1,13 @@
+# .gitignore
+# Node modules
+frontend/node_modules/
+
+# Angular build artifacts
+frontend/dist/
+
+# Python virtual environment
+backend/venv/
+
+# Python compiled files
+*.pyc
+__pycache__/
