@@ -1,0 +1,65 @@
+   ::ng-deep .ct-grid.ct-horizontal {
+       display: none;
+   }
+
+   ::ng-deep foreignObject.has-ct-label {
+       display: none !important;
+   }
+
+   ::ng-deep foreignObject.has-ct-label.every_nth_2:nth-child(2n) {
+       display: block !important;
+   }
+
+
+   ::ng-deep foreignObject.has-ct-label.every_nth_4:nth-child(4n) {
+       display: block !important;
+   }
+
+
+   ::ng-deep foreignObject.has-ct-label.every_nth_8:nth-child(8n) {
+       display: block !important;
+   }
+
+
+   ::ng-deep foreignObject.has-ct-label.every_nth_16:nth-child(16n) {
+       display: block !important;
+   }
+
+
+   ::ng-deep foreignObject.has-ct-label.every_nth_32:nth-child(32n) {
+       display: block !important;
+   }
+
+
+   ::ng-deep foreignObject.has-ct-label.every_nth_64:nth-child(64n) {
+       display: block !important;
+   }
+
+
+   ::ng-deep foreignObject.has-ct-label.every_nth_128:nth-child(128n) {
+       display: block !important;
+   }
+
+   ::ng-deep foreignObject.has-ct-label span {
+       /* color: red; */
+       /* font-size: 2rem; */
+       transform: rotate(15deg);
+
+   }
+
+   /* 
+   :host {
+       background-color: tomato;
+   } */
+
+
+   ::ng-deep span {
+       user-select: none;
+       /* Prevents the text from being selected */
+       -webkit-user-select: none;
+       /* For Safari */
+       -moz-user-select: none;
+       /* For Firefox */
+       -ms-user-select: none;
+       /* For Internet Explorer and Edge */
+   }

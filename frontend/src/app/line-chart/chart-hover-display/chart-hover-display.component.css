@@ -1,0 +1,21 @@
+ span {
+     font-weight: 500;
+     font-size: 1.2rem;
+     /* margin: 0.5rem; */
+     background-color: wheat;
+     padding: 0.5rem;
+     border-radius: 25px;
+     color: teal;
+     user-select: none;
+     /* Prevents the text from being selected */
+     -webkit-user-select: none;
+     /* For Safari */
+     -moz-user-select: none;
+     /* For Firefox */
+     -ms-user-select: none;
+     /* For Internet Explorer and Edge */
+ }
+
+ div {
+     width: fit-content;
+ }

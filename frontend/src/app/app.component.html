@@ -1,3 +1,21 @@
+<nb-layout>
+    <nb-layout-header fixed>
+        <h1>Stocks</h1>
+    </nb-layout-header>
+
+    <nb-sidebar>Sidebar Content</nb-sidebar>
+    
+    <nb-layout-column>
+        <app-stock-search (result)="updateStock($event)"></app-stock-search>
+
+        @if (basicInfo$ | async; as basicInfo) {
+            <app-stock [stock]="stock" [basicStockInfo]="basicInfo"></app-stock>
+        }
+        
+
+        
 
 
-<app-bar-chart></app-bar-chart>
+    </nb-layout-column>
+  </nb-layout>
+ 

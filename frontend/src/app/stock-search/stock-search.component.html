@@ -1,0 +1,14 @@
+<div style="position: relative;">
+    <input #searchInputElement [formControl]="inputControl" placeholder="TICKER" nbInput (click)="clickInput($event)"/>
+
+    @if (showResults) {
+        
+@if (searchResults$ | async; as searchResults) {
+    @if (searchResults.length > 0) { 
+        <app-stock-search-result-list    [results]="searchResults" (selected)="emitResult($event)"
+        style="position: absolute; background-color: teal !important; left: 0rem; top: 3rem;"
+    ></app-stock-search-result-list>
+    }
+}
+    }
+</div> 

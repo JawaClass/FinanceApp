@@ -1,0 +1,13 @@
+<!-- <h2>IS OPEN {{results.length}}</h2> -->
+<ul>
+    @for (item of results; track item.symbol) {
+        <li     (click)="selectListItem(item)">
+            <span>{{item.symbol}}</span>
+            <span>{{item.shortname}}</span>
+            <span>{{item.exchDisp}}</span>
+            <span>{{item.exchange}}</span>
+            <span>{{item.quoteType}}</span>
+        </li>
+    }
+</ul>
+ 

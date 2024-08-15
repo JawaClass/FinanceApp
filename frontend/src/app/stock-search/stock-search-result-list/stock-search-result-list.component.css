@@ -1,0 +1,63 @@
+ span {
+     font-weight: 700;
+     text-wrap: nowrap;
+     width: 10ch;
+     overflow: hidden;
+     text-overflow: ellipsis;
+
+ }
+
+
+ li:nth-child(odd) {
+     background-color: tomato !important;
+ }
+
+
+ span:nth-of-type(1) {
+     width: 9ch;
+ }
+
+ span:nth-of-type(2) {
+     width: 30ch;
+ }
+
+ li {
+     display: flex;
+     flex-wrap: nowrap;
+     gap: 5rem;
+     cursor: pointer;
+     padding: 1rem;
+ }
+
+ li:hover {
+
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+     transform: scale(1.01);
+     /* Slightly increases the size of the item */
+ }
+
+ ul {
+     display: flex;
+     flex-direction: column;
+     padding: 0;
+     margin: 0;
+
+     background-color: white;
+     border-radius: 8px;
+     padding: 10px;
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+     transition: transform 0.3s ease, opacity 0.3s ease;
+     opacity: 1;
+     transform: translateY(0);
+     position: absolute;
+     z-index: 1000;
+     /* Ensures it appears above other content */
+ }
+
+ .ul:hover,
+ .ul:hover {
+     transform: translateY(-5px);
+     /* Slight upward movement */
+     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+     /* Increase shadow for a more pronounced effect */
+ }

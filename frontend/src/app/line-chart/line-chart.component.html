@@ -1,0 +1,17 @@
+
+<div #line_chart style="position: relative; height: 100%; width: 100%;"  >
+       @if (itemHover) {
+        <app-chart-hover-display 
+        
+        #priceOverlay
+        [price]="itemHover.data.value.y" [date]="itemHover.label.toString()"
+        
+        style="position: absolute;"
+        
+        [style.left]="movementX + 'px'"
+
+        [style.top]="movementY + 40 + 'px'"
+        
+        ></app-chart-hover-display>
+      }
+ </div> 

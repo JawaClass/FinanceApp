@@ -1,0 +1,26 @@
+
+
+@if (history$ | async; as history) {
+    <div style="display: flex; flex-direction: column; gap: 0.2rem; background-color: whitesmoke !important;" [style.width]="size.width">
+         
+    <section style="display: flex; justify-content: space-between; flex-direction: row; ">
+        
+        <section style="display: flex; gap: 1rem; align-items: center;">
+            <app-company-logo [companyName]="basicStockInfo?.website" [style.height]="'4rem'"  ></app-company-logo>
+            <span style="font-size: 2rem; font-weight: 700; line-height: 2.5rem;">{{stock.symbol}}</span>
+
+            <span class="perc-change" [class.perc-change-neg]="history.perc_change < 0"   >{{history.perc_change |  number:'1.2-2' }}%</span>
+        </section>
+        
+        @if (showEnlarge) { 
+            
+            <nb-icon  (click)="enlarge()"   icon="expand-outline"></nb-icon>
+             } 
+        @else { 
+              <nb-icon   (click)="shrink()"   icon="collapse-outline"  ></nb-icon>
+               }
+        </section>
+        <app-line-chart  [style.height]="size.height"  [time_delta_days]="history.time_delta_days" [selectYearValue]="year"  [labels]="history.date" [series]="history.open"></app-line-chart>
+        <app-select-year [year]="year" (select)="updateYear($event)" ></app-select-year>
+    </div>
+}

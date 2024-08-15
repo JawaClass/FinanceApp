@@ -1,0 +1,19 @@
+::ng-deep .dialog-class {
+    background-color: whitesmoke;
+}
+
+::ng-deep nb-icon {
+    font-size: 2rem !important;
+    cursor: pointer;
+}
+
+
+.perc-change {
+    font: 1.1rem;
+    font-weight: 600;
+    color: green;
+}
+
+.perc-change-neg {
+    color: red;
+}

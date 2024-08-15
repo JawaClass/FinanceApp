@@ -1,0 +1,12 @@
+
+<h2>{{basicStockInfo.currency}}</h2>
+
+<div style="display: flex; flex-direction: column;">
+    <span>{{basicStockInfo.currentPrice}} {{basicStockInfo.currency}}</span>
+    <span>Cash:{{basicStockInfo.totalCash | bigNumber}} Debt:{{basicStockInfo.totalDebt | bigNumber}} Net Cash: {{(basicStockInfo.totalCash - basicStockInfo.totalDebt) | bigNumber}} </span>
+    <span>{{basicStockInfo.marketCap | bigNumber}}</span>
+</div>
+
+<app-company-logo [companyName]="basicStockInfo.website"></app-company-logo>
+ 
+<app-line-chart-history [stock]="stock" [basicStockInfo]="basicStockInfo"></app-line-chart-history>
